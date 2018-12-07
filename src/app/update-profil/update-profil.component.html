@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="page login-page ">
+  <div class="container" id="inscri">
+    <div class="row">
+      <div class="form-outer text-center d-flex align-items-center">
+        <div class="form-inner col-lg-8 offset-lg-2 ">
+          <div class="logo text-uppercase animated rubberBand" id="log_text"><span id="amical">Amicale</span><strong class="text-primary"> SPB</strong></div>
+          <form class="text-left form-validate">
+            <div class="form-group-material">
+              <input id="register-nom" placeholder="Nom" type="text" name="registernom" required data-msg="Nom Obligatoire" class="input-material">
+            </div>
+            <div class="form-group-material">
+              <input id="register-prenom" placeholder="Prenom" type="text" name="registerprenom" required data-msg="Prenom Obligatoire" class="input-material">
+            </div>
+            <div class="form-group-material">
+              <input id="register-email" placeholder="Email" type="email" name="registerEmail" required data-msg="Address email non valid" class="input-material">
+            </div>
+            <div class="form-group-material">
+              <input id="password" placeholder="Mot de passe" type="password" name="registerPassword" required data-msg="Mot de passe Obligatoire" class="input-material">
+            </div>
+            <div class="form-group-material">
+              <input id="confirmPassword" placeholder="Confirmer Mot de passe" type="password" name="registerPassword" required data-msg="Confirmer votre Mot de passe" class="input-material">
+            </div>
+            <div class="form-group-material">
+              <input id="tel" placeholder="Tel" type="tel" name="tel" pattern="[0-9]{8}" required data-msg="Numéro de téléphone Obligatoire" class="input-material">
+            </div>
+
+            <div class="form-group text-center">
+              <input id="edit" name="edit" type="submit" value="Modifier" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

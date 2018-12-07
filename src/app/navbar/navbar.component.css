@@ -1,0 +1,15 @@
+#logo{
+    width: 60%;
+    height: 60%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+
+.nav-link{
+    font-size: 15px;
+}
+
+.nav-scroll{
+    background-color: rgba(255,255,255,0.7);
+}

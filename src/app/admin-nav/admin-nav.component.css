@@ -1,0 +1,13 @@
+#body-row {
+    margin-left:0;
+    margin-right:0;
+}
+
+
+.navbar-header{
+    margin-left: 1rem;
+}
+#admin-logo{
+    height: 25%;
+    width: 20%;
+}

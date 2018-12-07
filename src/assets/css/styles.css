@@ -1,0 +1,44 @@
+html,body{
+    height: 100%;
+    
+}
+/* Cover */
+#cover{
+    background: rgba(80,80,80,0.5) url('../img/stars.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center ;
+}
+
+
+img{
+    max-width: 100%;
+}
+.section-content{
+    padding: 5rem 0;
+}
+
+#about{
+    background: url('../img/girlincar.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.about-text{
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 2rem;
+}
+
+#footer-main{
+    background: #222;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2.5rem 0;
+}
+
+.btn,.form-control{
+    border-radius: 0px;
+}

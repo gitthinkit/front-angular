@@ -1,0 +1,112 @@
+<!-- Sidebar -->
+<div id="sidebar-container" class="sidebar-expanded d-none d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+  <!-- Bootstrap List Group -->
+  <ul class="list-group">
+
+
+    <a data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
+      <div class="d-flex w-100 justify-content-start align-items-center">
+        <span id="collapse-icon" class="fa fa-2x mr-3"></span>
+        <span id="collapse-text" class="menu-collapsed">Collapse</span>
+      </div>
+    </a>
+
+    <a routerLink="/admin" class="bg-dark list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-start align-items-center">
+        <span class="fa fa-dashboard fa-fw mr-3"></span>
+        <span class="menu-collapsed">Dashboard</span>
+      </div>
+    </a>
+    <!-- Menu with submenu -->
+    <a href="#user" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-start align-items-center">
+        <span class="fa fa-user fa-fw mr-3"></span>
+        <span class="menu-collapsed">Utilisateur</span>
+        <span class="submenu-icon ml-auto"></span>
+      </div>
+    </a>
+    <!-- Submenu content -->
+    <div id='user' class="collapse sidebar-submenu">
+      <a routerLink="/admin/addUser" class="list-group-item list-group-item-action bg-dark text-white">
+        <span class="menu-collapsed">Ajouter</span>
+      </a>
+      <a routerLink="/admin/Users" class="list-group-item list-group-item-action bg-dark text-white">
+        <span class="menu-collapsed">Liste</span>
+      </a>
+    </div>
+    <a href="#fourn" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-start align-items-center">
+        <span class="fa fa-user fa-fw mr-3"></span>
+        <span class="menu-collapsed">Fournisseur</span>
+        <span class="submenu-icon ml-auto"></span>
+      </div>
+    </a>
+    <!-- Submenu content -->
+    <div id='fourn' class="collapse sidebar-submenu">
+      <a routerLink="/admin/addFourn" class="list-group-item list-group-item-action bg-dark text-white">
+        <span class="menu-collapsed">Ajouter</span>
+      </a>
+      <a routerLink="/admin/Fourns" class="list-group-item list-group-item-action bg-dark text-white">
+        <span class="menu-collapsed">Liste</span>
+      </a>
+    </div>
+
+    <a href="#event" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-start align-items-center">
+        <span class="fa fa-calendar fa-fw mr-3"></span>
+        <span class="menu-collapsed">Evénnement</span>
+        <span class="submenu-icon ml-auto"></span>
+      </div>
+    </a>
+    <!-- Submenu content -->
+    <div id='event' class="collapse sidebar-submenu">
+      <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+        <span class="menu-collapsed">Ajouter</span>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+        <span class="menu-collapsed">Liste</span>
+      </a>
+    </div>
+
+    <a href="#conv" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-start align-items-center">
+        <span class="fa fa-tasks fa-fw mr-3"></span>
+        <span class="menu-collapsed">Convention</span>
+        <span class="submenu-icon ml-auto"></span>
+      </div>
+    </a>
+    <!-- Submenu content -->
+    <div id='conv' class="collapse sidebar-submenu">
+      <a routerLink="/admin/addConv" class="list-group-item list-group-item-action bg-dark text-white">
+        <span class="menu-collapsed">Ajouter</span>
+      </a>
+      <a routerLink="/admin/Convs" class="list-group-item list-group-item-action bg-dark text-white">
+        <span class="menu-collapsed">Liste</span>
+      </a>
+    </div>
+
+    <a href="#cat" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-start align-items-center">
+        <span class="fa fa-list fa-fw mr-3"></span>
+        <span class="menu-collapsed">Catégorie</span>
+        <span class="submenu-icon ml-auto"></span>
+      </div>
+    </a>
+    <!-- Submenu content -->
+    <div id='cat' class="collapse sidebar-submenu">
+      <a routerLink="/admin/addCategory" class="list-group-item list-group-item-action bg-dark text-white">
+        <span class="menu-collapsed">Ajouter</span>
+      </a>
+      <a routerLink="/admin/Categories" class="list-group-item list-group-item-action bg-dark text-white">
+        <span class="menu-collapsed">Liste</span>
+      </a>
+    </div>
+
+    <a routerLink="" class="bg-dark list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-start align-items-center">
+        <span class="fa fa-home fa-fw mr-3"></span>
+        <span class="menu-collapsed">Accueil</span>
+      </div>
+    </a>
+  </ul><!-- List Group END-->
+</div><!-- sidebar-container END -->

@@ -1,0 +1,53 @@
+
+<app-admin-nav></app-admin-nav>
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+  <app-admin-sidebar></app-admin-sidebar>
+
+
+
+  <div class="container admin-container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-uppercase text-center  h3 page-title"><strong class="text-primary">Fournisseurs</strong></div>
+        <div *ngIf="show">
+          <div class="alert alert-{{type}} alert-dismissible fade show" role="alert">
+            {{msg}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Tel</th>
+            <th>Fax</th>
+            <th>Adresse</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <tr *ngFor="let f of fournisseurs">
+            <td>{{f.libelle}}</td>
+            <td>{{f.email}}</td>
+            <td>{{f.tel}}</td>
+            <td>{{f.fax}}</td>
+            <td>{{f.adresse}}</td>
+            <td>
+              <button class="btn btn-info btn-xs" (click)="onSelect(f.id_four)" style="margin-right: 1rem;">Modifier</button>
+              <button class="btn btn-danger btn-xs" (click)="onDelete(f.id_four)" >Supprimer</button>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+

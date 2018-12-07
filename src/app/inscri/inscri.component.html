@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="page login-page ">
+    <div class="container" id="inscri">
+        <div class="row">
+            <div class="form-outer text-center d-flex align-items-center">
+                <div class="form-inner col-lg-8 offset-lg-2 ">
+                    <div class="logo text-uppercase animated rubberBand" id="log_text"><span id="amical">Amicale</span><strong class="text-primary"> SPB</strong></div>
+                    <form (submit)="Inscrire($event,passconf.value)" class="text-left form-validate">
+                        <div class="form-group-material">
+                            <input id="register-nom" [(ngModel)]="user.nom" placeholder="Nom" type="text" name="registernom" required data-msg="Nom Obligatoire" class="input-material">
+                        </div>
+                        <div class="form-group-material">
+                            <input id="register-prenom" [(ngModel)]="user.prenom" placeholder="Prenom" type="text" name="registerprenom" required data-msg="Prenom Obligatoire" class="input-material">
+                        </div>
+                        <div class="form-group-material">
+                            <input id="register-email" [(ngModel)]="user.email" placeholder="Email" type="email" name="registerEmail" required data-msg="Address email non valid" class="input-material">
+                        </div>
+                        <div class="form-group-material">
+                            <input id="password" [(ngModel)]="user.password" placeholder="Mot de passe" type="password" name="registerPassword" required data-msg="Mot de passe Obligatoire" class="input-material">
+                        </div>
+                        <div class="form-group-material">
+                            <input id="confirmPassword" #passconf placeholder="Confirmer Mot de passe" type="password" name="registerPassword" required data-msg="Confirmer votre Mot de passe" class="input-material">
+                        </div>
+                        <div class="form-group-material">
+                            <input id="tel" [(ngModel)]="user.tel" placeholder="Tel" type="tel" name="tel" pattern="[0-9]{8}" required data-msg="Numéro de téléphone Obligatoire" class="input-material">
+                        </div>
+                        <div *ngIf="show">
+                            <div class="alert alert-{{type}} alert-dismissible fade show" role="alert">
+                              {{msg}}
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <input id="register" type="submit" value="S'inscrire" class="btn btn-primary">
+                        </div>
+                    </form><small class="small">Vous avez déja un compte? </small><a routerLink="/login" class="signup">Se connecter</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

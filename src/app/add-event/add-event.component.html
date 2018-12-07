@@ -1,0 +1,68 @@
+
+<app-admin-nav></app-admin-nav>
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+  <app-admin-sidebar></app-admin-sidebar>
+
+
+
+  <div class="container admin-container">
+    <div class="row">
+      <div class="page login-page col-md-12">
+        <div class="form-outer text-center align-items-center">
+
+          <div class="form-inner">
+            <div class="logo text-uppercase h3   animated rubberBand" id="title"><span>Ajouter </span><strong class="text-primary"> Evénement</strong></div>
+
+            <form method="get" class="text-left form-validate">
+
+              <div class="form-group-material">
+                <input id="titre" placeholder="Titre"  type="text" name="titre"  class="input-material">
+              </div>
+              <div class="form-group-material">
+                <select name="conv" id="conv" class="form-control">
+                  <option selected disabled>Convention</option>
+                  <option value="1">Convention 1 </option>
+                  <option value="2">Convention 2 </option>
+                  <option value="3">none </option>
+                </select>
+                <!--<input id="fourn" placeholder="Fournisseur" type="text" name="fourn" class="input-material">-->
+              </div>
+              <div class="form-group-material">
+                <input id="dateDeb" placeholder="Date Début" onfocus="(this.type='date')"  type="text" name="dateDeb"  class="input-material">
+              </div>
+              <div class="form-group-material">
+                <input id="delai" placeholder="Date Fin" onfocus="(this.type='date')" type="text" name="delai"  class="input-material">
+              </div>
+              <!--<div class="form-group-material">
+                <textarea name="descr" placeholder="Description" id="descr" cols="40" rows="5"></textarea>
+              </div>-->
+              <div class="form-group-material">
+                <label>Description</label>
+                <textarea name="descr" id="" cols="30" rows="10"></textarea>
+                <!--<editor apiKey="ueq8nafpdkco7tx9d9o3cq3isi4083kmytwyd66pd10x7n57" id="descr" ></editor>-->
+              </div>
+              <div class="form-group-material">
+                <!--<input type="file" name="picture" id="picture" class="form-control" placeholder="Add image">-->
+                <input id="f02" type="file" placeholder="Add profile picture" />
+                <label for="f02">Ajouter une image</label>
+              </div>
+
+
+              <div class="form-group text-center"><button id="add" name="add" type="submit" class="btn btn-primary">Ajouter</button>
+                <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div><!-- body-row END -->

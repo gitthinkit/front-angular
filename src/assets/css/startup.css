@@ -1,0 +1,110 @@
+.ml-auto{
+    margin-right: 3rem;
+}
+.nav-item{
+    margin-left: 0.5rem; 
+}
+html,body{
+    height: 100%;
+}
+body{
+    -webkit-font-smoothing:antialiased;
+    text-rendering: optimizeLegibility;
+    color: #6c6f73;
+}
+
+h1,h2,h3,h4,h5{
+    color: #333;
+}
+
+h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+img{
+    max-width:  100%;
+}
+.blockquote{
+    font-size: 1.6rem;
+    color: #333;
+    border: none;
+    padding: 0;
+}
+.blockquote-footer{
+    margin: 1rem 0 0;
+}
+
+#stage{
+    background: url('../img/stage.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+#stage-caption{
+    font-size: 1.4rem;
+    font-weight: 200;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#stage-caption h1{
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.feature-content{
+    padding: 8rem 0;
+    overflow: hidden;
+    display: flex;
+        align-items: center;
+}
+.feature-content img{
+    margin-bottom: -8rem;
+}
+.feature-dark{
+     background: #262f36;
+    color: white;
+}
+.feature-dark h2{
+    color: white;
+}
+.feature-alt{
+    background: #f0f0f0;
+}
+#feature-four .feature-content{
+    padding: 0;
+}
+#feature-five img{
+    margin-top: 2rem;
+}
+
+#main-footer{
+    background: #262f36;
+    color: white;
+    padding: 4rem 0;
+    font-size: 0.8rem;
+}
+
+#main-footer h6{
+    color: #9fcdff;
+}
+
+
+
+#main-footer a:not(.fa){
+    color: #6c6f73;
+}
+
+.btn,.form-control{
+    border-radius: 0px;
+}

@@ -1,0 +1,49 @@
+
+<app-admin-nav></app-admin-nav>
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+  <app-admin-sidebar></app-admin-sidebar>
+
+
+
+  <div class="container admin-container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-uppercase text-center  h3 page-title"><strong class="text-primary">Utilisateurs</strong></div>
+        <div *ngIf="show">
+          <div class="alert alert-{{type}} alert-dismissible fade show" role="alert">
+            {{msg}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Email</th>
+            <th>Tel</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let user of users" > 
+                <td>{{user.nom}}</td>
+                <td>{{user.prenom}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.tel}}</td>
+                <td>
+                  <button class="btn btn-info btn-xs" (click)="onSelect(user.email);" style="margin-right: 1rem;">Modifier</button>
+                  <button class="btn btn-danger btn-xs" (click)="Supprimer(user.email)" >Supprimer</button>
+                </td>            
+              </tr> 
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+

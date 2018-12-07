@@ -1,0 +1,41 @@
+
+<app-admin-nav></app-admin-nav>
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+  <app-admin-sidebar></app-admin-sidebar>
+
+
+
+  <div class="container admin-container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-uppercase text-center  h3 page-title"><strong class="text-primary">Conventions</strong></div>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Fournisseur</th>
+            <th>Délai</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <tr *ngFor="let c of convs">
+            <td>{{ c.fournisseur.libelle }}</td>
+            <td>{{ c.datefin | date:"dd/MM/yyyy" }}</td>
+            <td>{{ c.description }}</td>
+            <td>
+              <button class="btn btn-info btn-xs" (click)="onSelect(c.idConv);" style="margin-right: 1rem;">Modifier</button>
+              <a class="btn btn-danger btn-xs text-white" (click)="Supprimer(c.idConv)">Supprimer</a>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+

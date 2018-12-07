@@ -1,0 +1,58 @@
+
+<app-admin-nav></app-admin-nav>
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+  <app-admin-sidebar></app-admin-sidebar>
+
+
+
+  <div class="container admin-container">
+    <div class="row">
+      <div class="page login-page col-md-12">
+        <div class="form-outer text-center d-flex align-items-center">
+
+          <div class="form-inner">
+            <div class="logo text-uppercase h4  animated rubberBand"><span>Modifier </span><strong class="text-primary"> Utilisateur</strong></div>
+
+            <form (submit)="Modifier($event,passconf.value)" class="text-left form-validate">
+              <div class="form-group-material">
+                <input id="register-nom"  [(ngModel)]="user.nom" placeholder="Nom" type="text" name="registernom" required data-msg="Nom Obligatoire" class="input-material">
+              </div>
+              <div class="form-group-material">
+                <input id="register-prenom"  [(ngModel)]="user.prenom" placeholder="Prenom" type="text" name="registerprenom" required data-msg="Prenom Obligatoire" class="input-material"/>
+              </div>
+              <div class="form-group-material">
+                <input id="register-email"  [(ngModel)]="user.email" disabled="true" placeholder="Email" type="email" name="registerEmail" required data-msg="Address email non valid" class="input-material">
+              </div>
+              <div class="form-group-material">
+                <input id="password" [(ngModel)]="user.password" placeholder="Mot de passe" type="password" name="registerPassword" required data-msg="Mot de passe Obligatoire" class="input-material">
+              </div>
+              <div class="form-group-material">
+                <input id="confirmPassword" #passconf placeholder="Confirmer Mot de passe" type="password" name="registerPassword" required data-msg="Confirmer votre Mot de passe" class="input-material">
+              </div>
+              <div class="form-group-material">
+                <input id="tel" placeholder="Tel"  [(ngModel)]="user.tel"  type="tel" name="tel" pattern="[0-9]{8}" required data-msg="Numéro de téléphone Obligatoire" class="input-material">
+              </div>
+              <div *ngIf="show">
+                <div class="alert alert-{{type}} alert-dismissible fade show" role="alert">
+                  {{msg}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="form-group text-center"><button id="edit" name="edit" type="submit" class="btn btn-primary">Modifier</button></div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div><!-- body-row END -->

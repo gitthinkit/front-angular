@@ -1,0 +1,57 @@
+
+<app-admin-nav></app-admin-nav>
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+  <app-admin-sidebar></app-admin-sidebar>
+
+
+
+  <div class="container admin-container">
+    <div class="row">
+      <div class="page login-page col-md-12">
+        <div class="form-outer text-center d-flex align-items-center">
+
+          <div class="form-inner">
+            <div class="logo text-uppercase h3  animated rubberBand"><span>Modifier </span><strong class="text-primary"> Fournisseur</strong></div>
+
+            <form (submit)="Modifier($event)" class="text-left form-validate">
+              <div class="form-group-material">
+                <input id="register-nom" [(ngModel)]="fo.libelle" placeholder="libelle" type="text" name="registernom" required data-msg="Nom Obligatoire" class="input-material">
+              </div>
+              <div class="form-group-material">
+                <input id="tel" placeholder="Tel" [(ngModel)]="fo.tel" type="tel" name="tel" pattern="[0-9]{8}" required data-msg="Numéro de téléphone Obligatoire" class="input-material">
+              </div>
+              <div class="form-group-material">
+                <input id="register-email" [(ngModel)]="fo.email" placeholder="Email" type="email" name="registerEmail" required data-msg="Addresse email non valid" class="input-material">
+              </div>
+              <div class="form-group-material">
+                <input id="register-fax" [(ngModel)]="fo.fax" placeholder="Fax" type="text" name="registerFax" required data-msg="Fax Obligatoire" class="input-material">
+              </div>
+              <div class="form-group-material">
+                <input id="register-adress" [(ngModel)]="fo.adresse" placeholder="Adresse" type="text" name="registerAdress" required data-msg="Addresse Obligatoire" class="input-material">
+              </div>
+              <div *ngIf="show">
+                <div class="alert alert-{{type}} alert-dismissible fade show" role="alert">
+                  {{msg}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="form-group text-center"><button id="edit" name="edit" type="submit" class="btn btn-primary">Modifier</button>
+                <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div><!-- body-row END -->

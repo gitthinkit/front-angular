@@ -1,0 +1,24 @@
+/*#log_cont{
+    margin-top: -4rem;
+    height: 100%;
+}*/
+
+.login-page{
+    background-image: url("../../assets/images/new_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#log_text{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#amical{
+    color: #9b9faa;
+}
+small{
+    color: #7c9192;
+}
+
+

@@ -1,0 +1,66 @@
+
+<app-admin-nav></app-admin-nav>
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+  <app-admin-sidebar></app-admin-sidebar>
+
+
+
+  <div class="container admin-container">
+    <div class="row">
+      <div class="page login-page col-md-12">
+        <div class="form-outer text-center d-flex align-items-center">
+
+          <div class="form-inner">
+            <div class="logo text-uppercase h3  animated rubberBand"><span>Ajouter </span><strong class="text-primary"> Convention</strong></div>
+
+            <form (submit)="Ajouter($event)" class="text-left form-validate">
+
+
+              <div class="form-group-material">
+                <input required [(ngModel)]="conv.titre" id="titre" placeholder="Titre" type="text" name="titre"  class="input-material">
+              </div>
+
+              <div class="form-group-material">
+                <select required [(ngModel)]="selectedFourn" name="fourn" id="fourn" class="form-control">
+                  <option *ngFor="let fourn of fourns" [value]="fourn.id_four" > {{ fourn.libelle }} </option>
+                </select>
+              </div>
+
+              <div class="form-group-material">
+                <select required [(ngModel)]="selectedCat" name="cat" id="cat" class="form-control">
+                  <option *ngFor="let cat of cats" [value]="cat.id" > {{ cat.nom }} </option>
+                </select>
+                <!--<input id="fourn" placeholder="Fournisseur" type="text" name="fourn" class="input-material">-->
+              </div>
+
+              <div class="form-group-material">
+                <input required [(ngModel)]="conv.datedeb" id="datedeb" placeholder="Date Conv" onfocus="(this.type='date')"  type="text" name="datedeb"  class="input-material">
+              </div>
+              <div class="form-group-material">
+                <input required [(ngModel)]="conv.datefin" id="datefin" placeholder="Date Fin" onfocus="(this.type='date')" type="text" name="datefin"  class="input-material">
+              </div>
+              <div class="form-group-material">
+                <textarea required [(ngModel)]="conv.description" name="descr" placeholder="Description" id="descr" cols="40" rows="5"></textarea>
+              </div>
+              <div class="form-group-material">
+                <textarea required [(ngModel)]="conv.conditionconv" name="conditionconv" placeholder="Conditions" id="conditionconv" cols="40" rows="5"></textarea>
+              </div>
+
+              <div class="form-group text-center"><button id="add" name="add" type="submit" class="btn btn-primary">Ajouter</button>
+                <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div><!-- body-row END -->

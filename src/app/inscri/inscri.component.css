@@ -1,0 +1,23 @@
+.login-page{
+    background-image: url("../../assets/images/new_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-outer, .form-inner{
+    width: 100%;
+}
+#log_text{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#amical{
+    color: #9b9faa;
+}
+
+small{
+    color: #7c9192;
+}
+#inscri{
+    margin-top: 7rem;
+}
